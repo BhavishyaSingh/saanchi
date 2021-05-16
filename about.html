@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About | Saanchi</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+      .navi {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      .nav {
+        float: left;
+      }
+
+      .nav {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .navi :hover:not(.active-navi, .modal, .sign-up, li) {
+        background-color: #eee;
+        color: black;
+      }
+
+      .active-navi {
+        background-color: #4CAF50;
+        color: black;
+        padding: 14px 50px;
+        display: block;
+        text-decoration: none;
+      }
+      html,
+      body {
+        font-family: 'Montserrat';font-size: 22px;
+        height: 100%;
+      }
+      .navi {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .page-wrapper a:hover {
+        color: #006669;
+      }
+      .page-wrapper {
+        min-height: 100%;
+      }
+      .footer {
+        background: #303036;
+        color: #d3d3d3;
+        height: 450px;
+        position: relative;
+        padding-top: 50px;
+      }
+      .footer .footer-bottom {
+        background: #343a40;
+        color: #686868;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        padding-top: 20px;
+      }
+      .footer .footer-content {
+        height: 400px;
+        display: flex;
+      }
+      .footer .footer-content .footer-section {
+        flex: 1;
+        padding: 0px 25px;
+      }
+      .footer .footer-content h1 {
+        color: white;
+      }
+      .footer .footer-content h2 {
+        color: white;
+      }
+      .footer .footer-content .about h1 span  {
+        color: #ffd700;
+      }
+      .links {
+        text-decoration: none;
+        color: white;
+        list-style-type: none;
+      }
+      .footer. footer-content .footer-section .socials {
+        color: white;
+        text-decoration: none;
+      }
+
+      .logo {
+        max-width: 2000px;
+        position: relative; top: 45px;
+        display: block;
+        margin: auto;
+        background-color: #000;
+        text-align: center;
+      }
+
+      .slogan{
+        float: center;
+        background-image: url(https://www.teahub.io/photos/full/120-1206874_clothes-wallpaper-clothes-wallpaper-hd.jpg);
+        padding: 0px;
+      }
+      .slogan1 {
+        position: relative; left: 50px;
+        width: 700px;
+        color: white;
+      }
+      .slogan2 {
+        position: relative; left: 150px;
+        width: 700px;
+        color: black;
+      }
+      .slogan3 {
+        position: relative; left: 750px;
+        width: 700px;
+        color: white;
+      }
+      input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.sign-up {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  position: relative;
+  left: 975px;
+}
+
+.sign-up:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+  .video-about {
+      width: 50%;
+      padding: 50px;
+      padding-top: 100px;
+  }
+
+
+    #map{
+      height: 400px;
+      width: 100%;
+    }
+
+
+
+    </style>
+    <script>
+      function initMap() {
+        const saanchi = { lat: 28.491 , lng: 77.136 }
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: saanchi,
+        });
+        const marker = new google.maps.Marker({
+            position: saanchi,
+            map: map,
+          });
+      }
+    </script>
+  </head>
+  <body>
+
+    <div class="logo">
+      <a href="home.html"><img src="https://i.ibb.co/zVcgbG2/unnamed-3.jpg" alt="Saanchi By Sanchita" style="width:40%;"></a>
+    </div>
+<iframe width="900" height="506" src="https://www.youtube.com/embed/deuq_q5ze2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video-about"></iframe>
+<p style="width: 30%; text-align:center; position:absolute; top: 310px; left: 950px; font-size: 24px;"><b>ABOUT US</b><br><br>Founded in March 2015 by Sanchita Singh Roy, Brand "Saanchi by Sanchita" under "Prapti Enterprises" has become a respected, recognised and revered name in a short span of time. The company owns, creates and operates distinctive label catering to distinct segments. Saanchi by Sanchita creates classic, free spirited silhouettes from Western influence blended with Indian embroideries, textiles and styling apt for the young at heart and in age.</p>
+
+
+<div class="story1" style="padding: 50px;">
+<p style="width: 30%; text-align:center; position:relative; top: -25px; left: 100px; font-size: 24px;">Today, Saanchi by Sanchita has a widespread reach that extends not just across the country, but beyond the borders as well. Within India, the network includes well above twenty points of sale with one exclusive brand store in the fashion capital and over nineteen multi-brand large format stores in more than fifteen cities. Globallv. Saanchi by sanchita marked its presence in Asian Market.</p>
+<img src="https://i.ytimg.com/vi/SxogCraaUBg/maxresdefault.jpg" style=" width:50%; position:absolute; top:850px; left:700px;">
+</div>
+
+<div class="maps-address">
+  <p style="text-align: center; padding: 25px;">We're right near you!<br><br>Ghitorni, New Delhi, Delhi 110030</p>
+  <div id="map"></div>
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl-1z-IHg3aTgHIpmhUEBZBQB6mfpnAN8&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+</div>
+
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h1 class="logo-text"><span>Saanchi</span> by Sanchita</h1>
+          <p>
+            Ever since launch in 2015 our community that is Saanchi by Sanchita has become a successful business, we have built this business for and by women and intend to keep it that way
+          </p>
+          <div class="contact">
+            <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
+            <span><i class="fas fa-envelope"></i> &nbsp; saanchibysanchita@sample.frog</span>
+          </div>
+          <div class="socials">
+            <a href="https://www.facebook.com/SAANCHIbySanchita/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/saanchibysanchita/"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/saanchi305?lang=en"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/watch?v=06zl_L-DJP0"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <br>
+          <ul>
+            <a href="home.html" class="links"><li>Home</li></a><br>
+            <a href="gallery.html" class="links"><li>Gallery</li></a><br>
+            <a href="about.html" class="links"><li>About Us</li></a>
+          </ul>
+        </div>
+        <div class="footer-section contact-form">
+          <h2>Contact Us</h2>
+          <br>
+          <form action="index.html" method="post">
+            <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+            <br>
+            <textarea name="mesage" class="text-input contact input" placeholder="Your Message..."></textarea>
+            <br>
+            <button type="submit" class="btn btn-big">Send</button>
+            <i class="fas fa-envelope"></i>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; Prapti Enterprises | Designed by Bhavishya Singh
+      </div>
+    </div>
+    <ul class="navi">
+      <li style="float:right"><a class="active-navi">About Us</a></li>
+      <li><a href="home.html" class="nav">Home</a></li>
+      <li><a href="gallery.html" class="nav">Gallery</a></li>
+      <li>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="sign-up">Sign Up</button>
+
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+            <p>By creating an account you agree to our <a href="https://en.wikipedia.org/wiki/T%26C" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <script>
+      var modal = document.getElementById('id01');
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+      </li>
+    </ul>
+
+
+
+
+
+  </body>
+</html>
