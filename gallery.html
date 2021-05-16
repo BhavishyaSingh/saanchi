@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clothing | Saanchi</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+      .navi {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      .nav {
+        float: left;
+      }
+
+      .nav {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .navi :hover:not(.active-navi, .modal, .sign-up, li) {
+        background-color: #eee;
+        color: black;
+      }
+
+      .active-navi {
+        background-color: #4CAF50;
+        color: black;
+        padding: 14px 50px;
+        display: block;
+        text-decoration: none;
+      }
+      html,
+      body {
+        font-family: 'Montserrat';font-size: 22px;
+        height: 100%;
+      }
+      .navi {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .page-wrapper a:hover {
+        color: #006669;
+      }
+      .page-wrapper {
+        min-height: 100%;
+      }
+      .footer {
+        background: #303036;
+        color: #d3d3d3;
+        height: 450px;
+        padding-top: 50px;
+        margin-top: 50px;
+        float: left;
+      }
+      .footer .footer-bottom {
+        background: #343a40;
+        color: #686868;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        bottom: 0px;
+        left: 0px;
+        padding-top: 20px;
+        float: left;
+      }
+      .footer .footer-content {
+        height: 400px;
+        display: flex;
+      }
+      .footer .footer-content .footer-section {
+        flex: 1;
+        padding: 0px 25px;
+      }
+      .footer .footer-content h1 {
+        color: white;
+      }
+      .footer .footer-content h2 {
+        color: white;
+      }
+      .footer .footer-content .about h1 span  {
+        color: #ffd700;
+      }
+      .links {
+        text-decoration: none;
+        color: white;
+        list-style-type: none;
+      }
+      .footer. footer-content .footer-section .socials {
+        color: white;
+        text-decoration: none;
+      }
+      .logo {
+        max-width: 2000px;
+        position: relative; top: 45px;
+        display: block;
+        margin: auto;
+        background-color: #000;
+        text-align: center;
+      }
+      input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.sign-up {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  position: relative;
+  left: 975px;
+}
+
+.sign-up:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+div.gallery {
+  margin: 5px;
+  float: left;
+  width: 32%;
+  padding: 5px;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <div class="logo">
+      <a href="home.html"><img src="https://i.ibb.co/zVcgbG2/unnamed-3.jpg" alt="Saanchi By Sanchita" style="width:40%;"></a>
+    </div>
+    <h1 style="text-align:center; font-size:144px; color:#ffd700;">GALLERY</h1>
+
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://www.thewoomag.com/media/saanchi-by-Sanchita-designer-ethnic-wear-for-the-festive-season.jpeg" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://theretrofeeling.com/wp-content/uploads/2019/08/IMG-20190801-WA0005.jpg" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://images.jdmagicbox.com/comp/delhi/u8/011pxx11.xx11.181215145327.v7u8/catalogue/saanchi-by-sanchita-ghitorni-delhi-fashion-designer-stores-ii0jvv9kss.jpg?clr=#333333" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://i.pinimg.com/564x/92/fd/85/92fd85fd3d5fe3322374914addd225f4.jpg" width="30%" height="auto">
+      </a>
+    </div>
+
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://www.benzerworld.com/pub/media/wysiwyg/blog/11.jpg " width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://www.looksgud.in/blog/wp-content/uploads/2017/04/choli-with-dhoti-pant.jpg" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://assets.panashindia.com/media/catalog/product/cache/1/small_image/262x377/9df78eab33525d08d6e5fb8d27136e95/2/4/247tb01-1231.jpg" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://s3.ap-south-1.amazonaws.com/happyshappy/pins/2018/06/big/0b82e14bb41d5d5c48c76175ee0a270e.jpeg" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://i.pinimg.com/originals/4f/be/9d/4fbe9d818f228e5c7aeefc67ad91a81a.jpg" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://qph.fs.quoracdn.net/main-qimg-283e6a37de86910698060b350d792ab9" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://cdn.shopify.com/s/files/1/0121/8376/5088/files/four_1024x1024.jpg?v=1577339777" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://www.looksgud.in/blog/wp-content/uploads/2017/04/maxi-dress-with-ethnic-jacket.jpg" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://www.1grandtrunk.com/wp-content/uploads/2018/05/fab-india.jpg" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://cdn.shopify.com/s/files/1/2260/2507/products/gucciLehenga_grande.jpg?v=1587247411" width="30%" height="auto">
+      </a>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp7eJ-hH7AElAw00dBIR9vlxozcRrMEIth1Q&usqp=CAU" width="30%" height="auto">
+      </a>
+    </div>
+
+
+
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h1 class="logo-text"><span>Saanchi</span> by Sanchita</h1>
+          <p>
+            Ever since launch in 2015 our community that is Saanchi by Sanchita has become a successful business, we have built this business for and by women and intend to keep it that way
+          </p>
+          <div class="contact">
+            <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
+            <span><i class="fas fa-envelope"></i> &nbsp; saanchibysanchita@sample.frog</span>
+          </div>
+          <div class="socials">
+            <a href="https://www.facebook.com/SAANCHIbySanchita/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/saanchibysanchita/"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/saanchi305?lang=en"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/watch?v=06zl_L-DJP0"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <br>
+          <ul>
+            <a href="home.html" class="links"><li>Home</li></a><br>
+            <a href="gallery.html" class="links"><li>Gallery</li></a><br>
+            <a href="about.html" class="links"><li>About Us</li></a>
+          </ul>
+        </div>
+        <div class="footer-section contact-form">
+          <h2>Contact Us</h2>
+          <br>
+          <form action="index.html" method="post">
+            <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+            <br>
+            <textarea name="mesage" class="text-input contact input" placeholder="Your Message..."></textarea>
+            <br>
+            <button type="submit" class="btn btn-big">Send</button>
+            <i class="fas fa-envelope"></i>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; Prapti Enterprises | Designed by Bhavishya Singh
+      </div>
+    </div>
+    <ul class="navi">
+      <li style="float:right"><a class="active-navi">Gallery</a></li>
+      <li><a href="home.html" class="nav">Home</a></li>
+      <li><a href="about.html" class="nav">About Us</a></li>
+      <li>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="sign-up">Sign Up</button>
+
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+            <p>By creating an account you agree to our <a href="https://en.wikipedia.org/wiki/T%26C" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <script>
+      var modal = document.getElementById('id01');
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+        </script>
+      </li>
+    </ul>
+
+
+
+
+
+
+  </body>
+</html>
